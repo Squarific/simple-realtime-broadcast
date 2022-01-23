@@ -3,12 +3,11 @@ FROM node:current AS build
 
 
 WORKDIR /usr/src/app
-# Copy all file
-COPY . ./server/brightfoxServer
+# Copy all files
+COPY ./src/server/simpleBroadcast/libraries/simpleRealtimeBroadcast .
 
-# Go back to app dir
-WORKDIR /usr/src/app/server/brightfoxServer/
+RUN npm install
 
 # Start server
-CMD yarn run server
-EXPOSE 8655
+CMD node main.js
+EXPOSE 8080

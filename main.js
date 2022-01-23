@@ -1,5 +1,5 @@
 const WebSocket = require('ws');
-const Room = require('./libraries/QuestionRoom.js');
+const Room = require('./libraries/Room.js');
 const rooms = {};
 
 const MIN_TIME_BETWEEN_MESSAGES_OF_ONE_CLIENT = 40;
